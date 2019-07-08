@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from odoo import http
 
-# class Project(http.Controller):
-#     @http.route('/project/project/', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
+class Project(http.Controller):
+    @http.route('/project', auth='public')
+    def index(self, **kw):
+        return "Hello, world"
 
 #     @http.route('/project/project/objects/', auth='public')
 #     def list(self, **kw):
