@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 from odoo import http
+# import odoo.addons.web.controllers.main as main
 
 class Project(http.Controller):
-    @http.route('/project', auth='public')
-    def index(self, **kw):
-        return "Hello, world"
+
+    @http.route('/myshop', auth="public", type='http', website=True)
+    def shop(self, **kw):
+        return http.request.render('MYPROJECT.templates', {})
+
+
 
 #     @http.route('/project/project/objects/', auth='public')
 #     def list(self, **kw):
