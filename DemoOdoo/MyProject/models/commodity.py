@@ -21,8 +21,9 @@ class Items(models.Model):
     _inherit = "category_commodity"
 
     unit_price = fields.Integer("Đơn giá")
-    new_field_id = fields.Many2one(comodel_name="category_commodity", string="Thuộc loại hàng", required=False, )
+    new_field_id = fields.Many2many(comodel_name="category_commodity", string="Thuộc loại hàng", required=False, )
     unit = fields.Char(string="Đơn vị tính")
-
+    img_link = fields.Char(size = 2000)
+    description = fields.Char(size = 2000)
 
     _sql_constraints = [('ma_mat_hang_duy_nhat', 'UNIQUE(code)', u'Mã trùng rồi điền mã cái khác đi')]
