@@ -6,9 +6,7 @@ class Project(http.Controller):
 
     @http.route('/myshop', auth="public", type='http', website=True)
     def shop(self, **kw):
-        return http.request.render('MYPROJECT.templates', {})
-
-
+        return http.request.render('MyProject.template_master', {'categories':["aiaia","aadasdad","asdadqeqwe"]})
 
 #     @http.route('/project/project/objects/', auth='public')
 #     def list(self, **kw):
