@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="employees_act" model="ir.actions.act_window">
+            <field name="name">Danh sách nhân viên</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employees</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Tạo một thông tin nhân viên
+                </p>
+
+            </field>
+        </record>
+        <record id="employees_view" model="ir.ui.view">
+            <field name="name">Danh sách nhân viên</field>
+            <field name="model">employees</field>
+            <field name="arch" type="xml">
+                <tree string="Danh sách nhân viên">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+        <record id="employees_tree" model="ir.ui.view">
+            <field name="name">Thông tin nhân viên</field>
+            <field name="model">employees</field>
+            <field name="arch" type="xml">
+                <form string="Thông tin nhân viên">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="address"/>
+                            <field name="phone"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="bills_act" model="ir.actions.act_window">
+            <field name="name">Danh sách hóa đơn bán hàng</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bills</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+        <record id="bills_form" model="ir.ui.view">
+            <field name="name">Thông tin hóa đơn bán hàng</field>
+            <field name="model">bills</field>
+            <field name="arch" type="xml">
+                <!--                 edit="false" create="false"-->
+                <form string="Danh sách hóa đơn bán hàng">
+                    <sheet>
+                        <group>
+                            <field name="code" class="text_width"/>
+                            <field name="datecurrent"/>
+                            <field name="goods"/>
+                            <field name="name_employees"/>
+                            <field name="name_customer"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="bills_view" model="ir.ui.view">
+            <field name="name">Danh sách hóa đơn bán hàng</field>
+            <field name="model">bills</field>
+            <field name="arch" type="xml">
+                <!--                create="false"-->
+                <tree string="Danh sách hóa đơn bán hàng">
+                    <field name="code" class="text_width"/>
+                    <field name="datecurrent"/>
+                    <field name="goods"/>
+                    <field name="name_employees"/>
+                    <field name="name_customer"/>
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

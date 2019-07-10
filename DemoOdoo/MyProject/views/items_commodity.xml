@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="items_commodity_act" model="ir.actions.act_window">
+            <field name="name">Danh sách mặt hàng</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">items_commodity</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Tạo danh sách các mặt hàng theo loại hàng
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+        <record id="items_commodity_view" model="ir.ui.view">
+            <field name="name">Danh sách các mặt hàng</field>
+            <field name="model">items_commodity</field>
+            <field name="arch" type="xml">
+                <tree string="Danh sách các mặt hàng">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="unit_price"/>
+                    <field name="unit"/>
+                    <field name="category_commodity"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="items_commodity_form" model="ir.ui.view">
+            <field name="name">Thông tin mặt hàng</field>
+            <field name="model">items_commodity</field>
+            <field name="arch" type="xml">
+                <form string="Thông tin mặt hàng">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Tên mặt hàng"/>
+                            </h1>
+                        </div>
+                        <notebook>
+                            <page string="Thông tin mặt hàng">
+                                <group>
+                                    <group>
+                                        <field name="unit_price"/>
+                                    </group>
+                                    <group>
+                                        <field name="unit"/>
+                                    </group>
+                                    <field name="category_commodity">
+                                        <tree editable="bottom" >
+                                            <field name="code" style="width:40%%"/>
+                                            <field name="name" />
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Mô tả mặt hàng">
+                                <group>
+                                    <field name="description"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

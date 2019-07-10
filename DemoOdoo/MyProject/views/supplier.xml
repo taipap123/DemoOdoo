@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="suppliers_act" model="ir.actions.act_window">
+            <field name="name">Danh sách nhà cung cấp</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">suppliers</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Tạo thông tin nhà cung cấp
+                </p>
+
+            </field>
+        </record>
+        <record id="suppliers_view" model="ir.ui.view">
+            <field name="name">Danh sách nhà cung cấp</field>
+            <field name="model">suppliers</field>
+            <field name="arch" type="xml">
+                <tree string="Danh sách nhà cung cấp">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+        <record id="suppliers_tree" model="ir.ui.view">
+            <field name="name">Thông tin nhà cung cấp</field>
+            <field name="model">suppliers</field>
+            <field name="arch" type="xml">
+                <form string="Thông tin nhà cung cấp">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

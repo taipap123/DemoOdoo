@@ -15,17 +15,28 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website'],
+    'depends': ['base', 'website'],
 
     # always loaded
+    "css": ["static/src/css/customtreeview.css"],
     'data': [
+        'views/customer.xml',
+        'views/employee.xml',
+        'views/items_commodity.xml',
+        'views/supplier.xml',
+        'views/bill.xml',
         # 'security/ir.model.access.csv',
+
         'views/base.xml',
         # 'views/categories.xml',
         # 'views/theme.xml',
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
