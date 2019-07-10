@@ -21,6 +21,9 @@
                 <tree string="Danh sách nhà cung cấp">
                     <field name="name"/>
                     <field name="code"/>
+                    <field name="address"/>
+                    <field name="phone"/>
+                    <field name="email"/>
                 </tree>
             </field>
         </record>
@@ -32,6 +35,9 @@
                     <sheet>
                         <group>
                             <field name="name"/>
+                            <field name="address"/>
+                            <field name="phone"/>
+                            <field name="email"/>
                         </group>
                     </sheet>
                 </form>

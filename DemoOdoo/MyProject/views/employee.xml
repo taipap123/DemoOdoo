@@ -23,6 +23,7 @@
                     <field name="name"/>
                     <field name="address"/>
                     <field name="phone"/>
+                    <field name="email"/>
                 </tree>
             </field>
         </record>
@@ -36,6 +37,7 @@
                             <field name="name"/>
                             <field name="address"/>
                             <field name="phone"/>
+                            <field name="email"/>
                         </group>
                     </sheet>
                 </form>
