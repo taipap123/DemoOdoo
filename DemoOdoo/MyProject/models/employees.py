@@ -9,6 +9,7 @@ class Employees(models.Model):
 
     code = fields.Integer("Mã", required=True)
     name = fields.Char("Tên")
+    email = fields.Char("Email")
     address = fields.Char(string="Địa chỉ")
     phone = fields.Char(string="Số điện thoại")
 
