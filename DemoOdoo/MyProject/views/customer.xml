@@ -43,7 +43,6 @@
                     <sheet>
                         <group>
                             <field name="name"/>
-                            <field name="code"/>
                             <field name="address"/>
                             <field name="phone"/>
                             <field name="email"/>
