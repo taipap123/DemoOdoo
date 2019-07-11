@@ -25,6 +25,7 @@
         'views/items_commodity.xml',
         'views/supplier.xml',
         'views/bill.xml',
+        'views/orders.xml',
         # 'security/ir.model.access.csv',
 
         'views/base.xml',

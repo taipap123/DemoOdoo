@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="orders_act" model="ir.actions.act_window">
+            <field name="name">Danh sách hóa đơn đặt hàng</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oders</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                     Hóa đơn này sẽ không được tạo bằng thủ công. Chức năng này sẽ được khóa khi đã hoàn thiện
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+        <record id="orders_form" model="ir.ui.view">
+            <field name="name">Danh sách hóa đơn đặt hàng</field>
+            <field name="model">oders</field>
+            <field name="arch" type="xml">
+                <form string="Danh sách hóa đơn bán hàng">
+                    <sheet>
+                        <group>
+                            <field name="name_employees"/>
+                            <field name="name_customer"/>
+                            <field name="datecurrent"/>
+                            <field name="goods"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="orders_view" model="ir.ui.view">
+            <field name="name">Thông tin hóa đơn đặt hàng</field>
+            <field name="model">oders</field>
+            <field name="arch" type="xml">
+                <tree string="Thông tin hóa đơn đặt hàng">
+                    <field name="code" class="text_width"/>
+                    <field name="datecurrent"/>
+                    <field name="name_employees"/>
+                    <field name="name_customer"/>
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
