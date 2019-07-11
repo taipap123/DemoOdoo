@@ -28,7 +28,8 @@
         # 'security/ir.model.access.csv',
 
         'views/base.xml',
-        # 'views/categories.xml',
+        'views/detail.xml',
+        'views/order_success.xml',
         # 'views/theme.xml',
         'views/menu.xml',
     ],

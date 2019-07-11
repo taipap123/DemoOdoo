@@ -58,66 +58,66 @@
                             </div>
                         </div>
                     </section>
-                    <section class="o_gallery s_image_gallery o_slideshow o_spc-medium" data-columns="3"
-                             style="overflow: hidden; height: 460px;">
-                        <div class="container">
-                            <div class="carousel slide" data-ride="carousel" style="margin: 0 12px;"
-                                 id="slideshow_1562657028288" data-interval="false">
-                                <div class="carousel-inner container" style="padding: 0;">
-                                    <div class="item active">
-                                        <img class="img img-responsive"
-                                             src="/MyProject/static/src/img/banner02-460x275.jpg"
-                                             data-index="0"/>
-                                    </div>
-                                    <div class="item">
-                                        <img class="img img-responsive"
-                                             src="/MyProject/static/src/img/banner04-460x275.jpg"
-                                             data-index="1"/>
-                                    </div>
-                                    <div class="item">
-                                        <img class="img img-responsive"
-                                             src="/MyProject/static/src/img/banner05-460x275.jpg"
-                                             data-index="2"/>
-                                    </div>
-                                    <div class="item">
-                                        <img class="img img-responsive"
-                                             src="/MyProject/static/src/img/banner06-460x275.jpg"
-                                             data-index="3"/>
-                                    </div>
-                                </div>
-                                <ul class="carousel-indicators">
-                                    <li class="fa fa-chevron-left o_indicators_left active"
-                                        style="overflow: hidden; padding: 12px; border: 0px;"/>
-                                    <li data-target="#slideshow_1562657028288" data-slide-to="0" class="active"
-                                        style="background-image: url(/MyProject/static/src/img/banner02-460x275.jpg);"/>
-                                    <li data-target="#slideshow_1562657028288" data-slide-to="1" class="false"
-                                        style="background-image: url(/MyProject/static/src/img/banner04-460x275.jpg)"/>
-                                    <li data-target="#slideshow_1562657028288" data-slide-to="2" class="false"
-                                        style="background-image: url(/MyProject/static/src/img/banner05-460x275.jpg)"/>
-                                    <li data-target="#slideshow_1562657028288" data-slide-to="3" class="false"
-                                        style="background-image: url(/MyProject/static/src/img/banner06-460x275.jpg)"/>
-                                    <li class="fa fa-chevron-right o_indicators_right"
-                                        style="overflow: hidden; padding: 12px; border: 0px;"/>
-                                </ul>
-                                <a class="carousel-control left" data-slide="prev" href="#slideshow_1562657028288">
-                                    <span class="fa fa-chevron-left"/>
-                                </a>
-                                <a class="carousel-control right" data-slide="next" href="#slideshow_1562657028288">
-                                    <span class="fa fa-chevron-right"/>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="parallax s_parallax_slider oe_custom_bg oe_img_bg" style="background-image: none;"
-                             data-scroll-background-ratio="1.6">
-                        <span class="s_parallax_bg oe_custom_bg"
-                              style="background-image: url('http://localhost:8069/myshop'); top: -99.68px; bottom: -99.68px; transform: translateY(95px);"/>
-                        <div>
-                            <div>
-                                <div class="oe_structure"/>
-                            </div>
-                        </div>
-                    </section>
+                    <!--                    <section class="o_gallery s_image_gallery o_slideshow o_spc-medium" data-columns="3"-->
+                    <!--                             style="overflow: hidden; height: 460px;">-->
+                    <!--                        <div class="container">-->
+                    <!--                            <div class="carousel slide" data-ride="carousel" style="margin: 0 12px;"-->
+                    <!--                                 id="slideshow_1562657028288" data-interval="false">-->
+                    <!--                                <div class="carousel-inner container" style="padding: 0;">-->
+                    <!--                                    <div class="item active">-->
+                    <!--                                        <img class="img img-responsive"-->
+                    <!--                                             src="/MyProject/static/src/img/banner02-460x275.jpg"-->
+                    <!--                                             data-index="0"/>-->
+                    <!--                                    </div>-->
+                    <!--                                    <div class="item">-->
+                    <!--                                        <img class="img img-responsive"-->
+                    <!--                                             src="/MyProject/static/src/img/banner04-460x275.jpg"-->
+                    <!--                                             data-index="1"/>-->
+                    <!--                                    </div>-->
+                    <!--                                    <div class="item">-->
+                    <!--                                        <img class="img img-responsive"-->
+                    <!--                                             src="/MyProject/static/src/img/banner05-460x275.jpg"-->
+                    <!--                                             data-index="2"/>-->
+                    <!--                                    </div>-->
+                    <!--                                    <div class="item">-->
+                    <!--                                        <img class="img img-responsive"-->
+                    <!--                                             src="/MyProject/static/src/img/banner06-460x275.jpg"-->
+                    <!--                                             data-index="3"/>-->
+                    <!--                                    </div>-->
+                    <!--                                </div>-->
+                    <!--                                <ul class="carousel-indicators">-->
+                    <!--                                    <li class="fa fa-chevron-left o_indicators_left active"-->
+                    <!--                                        style="overflow: hidden; padding: 12px; border: 0px;"/>-->
+                    <!--                                    <li data-target="#slideshow_1562657028288" data-slide-to="0" class="active"-->
+                    <!--                                        style="background-image: url(/MyProject/static/src/img/banner02-460x275.jpg);"/>-->
+                    <!--                                    <li data-target="#slideshow_1562657028288" data-slide-to="1" class="false"-->
+                    <!--                                        style="background-image: url(/MyProject/static/src/img/banner04-460x275.jpg)"/>-->
+                    <!--                                    <li data-target="#slideshow_1562657028288" data-slide-to="2" class="false"-->
+                    <!--                                        style="background-image: url(/MyProject/static/src/img/banner05-460x275.jpg)"/>-->
+                    <!--                                    <li data-target="#slideshow_1562657028288" data-slide-to="3" class="false"-->
+                    <!--                                        style="background-image: url(/MyProject/static/src/img/banner06-460x275.jpg)"/>-->
+                    <!--                                    <li class="fa fa-chevron-right o_indicators_right"-->
+                    <!--                                        style="overflow: hidden; padding: 12px; border: 0px;"/>-->
+                    <!--                                </ul>-->
+                    <!--                                <a class="carousel-control left" data-slide="prev" href="#slideshow_1562657028288">-->
+                    <!--                                    <span class="fa fa-chevron-left"/>-->
+                    <!--                                </a>-->
+                    <!--                                <a class="carousel-control right" data-slide="next" href="#slideshow_1562657028288">-->
+                    <!--                                    <span class="fa fa-chevron-right"/>-->
+                    <!--                                </a>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </section>-->
+                    <!--                    <section class="parallax s_parallax_slider oe_custom_bg oe_img_bg" style="background-image: none;"-->
+                    <!--                             data-scroll-background-ratio="1.6">-->
+                    <!--                        <span class="s_parallax_bg oe_custom_bg"-->
+                    <!--                              style="background-image: url('http://localhost:8069/myshop'); top: -99.68px; bottom: -99.68px; transform: translateY(95px);"/>-->
+                    <!--                        <div>-->
+                    <!--                            <div>-->
+                    <!--                                <div class="oe_structure"/>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </section>-->
                     <section class="s_company_team">
                         <div class="container">
                             <h1 class="text-center mb32 o_default_snippet_text">Mẫu thời trang mới nhất</h1>
@@ -125,23 +125,26 @@
 
                                 <t t-foreach="list_item" t-as="item">
 
-                                    <div class="col-md-6 mb32">
-                                        <div class="row s_no_resize_cols">
-                                            <div class="col-md-4">
-                                                <img src="/MyProject/static/src/img/items/{{ item.img_link }}"
-                                                     class="img-responsive img-circle center-block shadow"/>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h4 class="o_default_snippet_text">
-                                                    <t t-esc="item.name"/>
-                                                </h4>
-                                                <p class="text-muted o_default_snippet_text">
-                                                    <t t-esc="item.description"/>
-                                                </p>
+                                    <a t-attf-href="/myshop/detail/{{item.id}}">
+                                        <div class="col-md-6 mb32">
+                                            <div class="row s_no_resize_cols">
+                                                <div class="col-md-4">
+                                                    <img
+                                                            t-attf-src="/MyProject/static/src/img/items/{{item.img_link}}"
+                                                            t-attf-class="img-responsive img-circle center-block shadow"
+                                                    />
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h4 class="o_default_snippet_text">
+                                                        <t t-esc="item.name"/>
+                                                    </h4>
+                                                    <p class="text-muted o_default_snippet_text">
+                                                        <t t-esc="item.description"/>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
+                                    </a>
                                 </t>
                             </div>
                         </div>
