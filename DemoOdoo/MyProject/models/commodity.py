@@ -13,11 +13,11 @@ class CategoryCommodity(models.Model):
 
     @api.model
     def create(self,vals):
-        vals['code'] = int(self.search_count([]))
+        vals['code'] = int(self.search_count([])) + 1
         return super(CategoryCommodity, self).create(vals)
 
 
-    _sql_constraints = [('ma_loai_hang_duy_nhat', 'UNIQUE(code)', u'Mã trùng rồi điền mã cái khác đi')]
+    _sql_constraints = [('ma_code duy_nhat', 'UNIQUE(code)', u'Mã trùng rồi điền mã cái khác đi')]
 
 
 class Items(models.Model):
@@ -30,5 +30,3 @@ class Items(models.Model):
     unit = fields.Char(string="Đơn vị tính")
     img_link = fields.Char(size = 2000)
     description = fields.Text(size = 2000)
-
-    _sql_constraints = [('ma_mat_hang_duy_nhat', 'UNIQUE(code)', u'Mã trùng rồi điền mã cái khác đi')]

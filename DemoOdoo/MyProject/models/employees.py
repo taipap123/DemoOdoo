@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api, exceptions
-
+from datetime import datetime
 
 class Employees(models.Model):
     _name = "employees"
@@ -22,14 +22,8 @@ class Employees(models.Model):
     @api.model
     def create(self, vals):
         vals['name'] = vals.get('name').title()
-        # Tạo record cho model
-        # self.env['quanlysachlienlac'].create({'name': vals['name']})
-        # Chỉnh sửa record cho model
-        # self.env['quanlysachlienlac'].browse(20).name
-        # Tìm kím
         vals['code'] = int(self.search_count([]))
-        # self.env['quanlysachlienlac'].search([])
         return super(Employees, self).create(vals)
 
 
-_sql_constraints = [('ma_nhan_vien_duy_nhat', 'UNIQUE(code)', u'Mã trùng rồi điền mã cái khác đi')]
+_sql_constraints = [('ma_duy_nhat', 'UNIQUE(code)', u'Mã trùng rồi điền mã cái khác đi')]

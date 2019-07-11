@@ -16,7 +16,7 @@
                   sequence="4"/>
          <menuitem id="billsandorders_menu" name="Danh sách các hóa đơn" parent="masterdata_menu" sequence="5"/>
 <!--                  action="bills_act"-->
-           <menuitem id="bills_menu" name="Danh sách nhà cung cấp" parent="billsandorders_menu"
+           <menuitem id="bills_menu" name="Danh sách hóa đơn bán hàng" parent="billsandorders_menu"
                   action="bills_act"
                   sequence="1"/>
 

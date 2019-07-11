@@ -20,7 +20,7 @@
             <field name="name">Thông tin hóa đơn bán hàng</field>
             <field name="model">bills</field>
             <field name="arch" type="xml">
-                <!--                 edit="false" create="false"-->
+                <!--edit="false" create="false"-->
                 <form string="Danh sách hóa đơn bán hàng">
                     <sheet>
                         <group>
@@ -43,9 +43,16 @@
                 <tree string="Danh sách hóa đơn bán hàng">
                     <field name="code" class="text_width"/>
                     <field name="datecurrent"/>
-                    <field name="goods"/>
+<!--                    <field name="goods"/>-->
                     <field name="name_employees"/>
                     <field name="name_customer"/>
+<!--                    <field name="name_customer" widget="many2many">-->
+<!--                        <tree>-->
+<!--                            <field name="name"/>-->
+<!--                            <field name="city"/>-->
+<!--                            <field name="state"/>-->
+<!--                        </tree>-->
+<!--                    </field>-->
                 </tree>
             </field>
         </record>
