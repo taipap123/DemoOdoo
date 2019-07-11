@@ -1,0 +1,12 @@
+INSERT INTO public.fashion_items_commodity(
+	code, name, img_link, description)
+	VALUES (1, N'Đồng hồ Thụy Sỹ', '1.jpg', 'Một chiếc đồng hồ đẹp cho nam không chỉ để theo dõi thời gian hay làm phụ kiện thời trang, mà còn giúp đàn ông khẳng định được địa vị và ..');
+INSERT INTO public.fashion_items_commodity(
+	code, name, img_link, description)
+	VALUES (2, N'Áo thun cao cấp', '2.jpg', 'Áo thun không còn dành riêng cho nam giới, mà còn dành cho nữ giới, nó góp phần ... Xem video giới thiệu về chất liệu Cotton của ONOFF: ...');
+INSERT INTO public.fashion_items_commodity(
+	code, name, img_link, description)
+	VALUES (3, N'Guốc siêu cao cấp', '3.jpg', 'Vả lại, du khách nước ngoài cũng thích guốc Việt Nam, bán cho họ cũng là cách bà giới thiệu về Việt Nam. Có lần, một chàng trai Singapore sang du lịch Việt ...');
+INSERT INTO public.fashion_items_commodity(
+	code, name, img_link, description)
+	VALUES (4, N'Giày bata siêu bền', '4.jpg', 'Và giày thể thao chính là một trong những phụ kiện không thể thiếu để tạo nên vẻ đẹp sang trọng, hợp ... Vậy bạn có biết tiêu chí nào để đánh giá một đôi giày thể thao chất lượng tốt và tinh tế hay không? ... Giới thiệu về shoplamdep4u.com.');

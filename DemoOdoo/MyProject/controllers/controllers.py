@@ -29,16 +29,22 @@ class Project(http.Controller):
         item_id = kw.get("item_id")
         item_name = kw.get("item_name")
         item_unit_price = kw.get("item_unit_price")
-        #insert model customers
-        http.request.env["customers"].sudo().create({'name': name, 'phone': phone, 'email': email, 'address': address})
-        # insert model bills
-        id_bills = http.request.env["bills"].sudo().create({'name': name, 'phone': phone, 'email': email, 'address': address})
-        # insert model bills_items_commodity_rel
-        http.request.billsenv["bills_items_commodity_rel"].sudo().create(
-            {'bills_id': id_bills, 'items_commodity_id': item_id})
+
+        is_success = None
+        try:
+            # insert model customers
+            http.request.env["customers"].sudo().create({'name': name, 'phone': phone, 'email': email, 'address': address})
+            # insert model bills
+            id_customer = http.request.env['customers'].search([])[-1].id
+            http.request.env["bills"].sudo().create({'name_employees': 1, 'name_customer': int(id_customer),'mount': int(amount),
+                                                         'total_price': int(item_unit_price) * int(amount),
+                                                         'goods': [(4, int(item_id))]})
+            is_success = True
+        except:
+            is_success = False
 
         self.sent_Mail_Order(email, name, phone, address, item_name, amount,  str(int(item_unit_price) * int(amount)))
-        return http.request.render('MyProject.order_success', {'success':True})
+        return http.request.render('MyProject.order_success', {'success':is_success})
 
     def sent_Mail_Order(self, receiver_order, name, phone, address, items, amount, total):
         port = 465
