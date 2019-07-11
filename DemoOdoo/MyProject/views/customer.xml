@@ -8,7 +8,7 @@
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
-                    Chọn Create để tạo thông tin khác hàng
+                    Chọn Create để tạo thông tin khách hàng
                 </p>
 
             </field>
@@ -38,7 +38,7 @@
             <field name="arch" type="xml">
                 <form string="Thông tin khách hàng, đối tác">
                     <header>
-                        <button name="printt" string="Print" type="object" class="btn btn-primary"/>
+<!--                        <button name="printt" string="Print" type="object" class="btn btn-primary"/>-->
                     </header>
                     <sheet>
                         <group>

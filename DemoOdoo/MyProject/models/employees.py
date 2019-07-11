@@ -6,7 +6,8 @@ from datetime import datetime
 class Employees(models.Model):
     _name = "employees"
     _description = u"Danh sách nhân viên"
-
+    _auto = True
+    _table = "fashion_employees"
     code = fields.Integer("Mã", required=True)
     name = fields.Char("Tên")
     email = fields.Char("Email")
@@ -22,7 +23,7 @@ class Employees(models.Model):
     @api.model
     def create(self, vals):
         vals['name'] = vals.get('name').title()
-        vals['code'] = int(self.search_count([]))
+        vals['code'] = int(self.search_count([])) +1
         return super(Employees, self).create(vals)
 
 

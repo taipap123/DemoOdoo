@@ -7,7 +7,8 @@ from odoo import models, fields, api, exceptions
 class CategoryCommodity(models.Model):
     _name = "category_commodity"
     _description = u"Danh sách loại hàng"
-
+    _auto = True
+    _table = "fashion_categorys_commodity"
     code = fields.Integer("Mã", required=True, readonly='True')
     name = fields.Char("Tên")
 
@@ -22,6 +23,8 @@ class CategoryCommodity(models.Model):
 
 class Items(models.Model):
     _name = "items_commodity"
+    _auto = True
+    _table = "fashion_items_commodity"
     _description = u"Danh sách mặt hàng"
     _inherit = "category_commodity"
 
