@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="order_success" name="order success">
+            <t t-call="website.layout">
+                <div class="oe_structure">
+                    <t t-if="success">
+                        <div class="alert alert-success text-center">
+                            <strong>Đặt hàng thành công</strong>
+                            Xin kiểm tra lại thông tin trong email !
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <div class="alert alert-danger text-center">
+                            <strong>Có lỗi xảy ra</strong>
+                            Vui lòng kiểm tra lại thông tin
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
