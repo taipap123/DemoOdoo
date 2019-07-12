@@ -28,16 +28,21 @@ class Bill(models.Model):
     #       rec.total_price = 0
     #       if len(rec.goods) > 0:
     #           for i in range(len(rec.goods)):
-    #             rec.total_price += rec.goods[i].unit_price
+    #             rec.total_price += rec.goods[i].items_loan.unit_price*rec.goods[i].mount
     #       else:
     #           pass
 
 
     @api.model
     def create(self, vals):
-      vals['code'] = int(self.search_count([])) + 1
+      vals['code'] = int(self.search_count([])) + 10
       return super(Bill, self).create(vals)
 
+    @api.multi
+    def print(self):
+        print("asf")
+        # self.filtered(lambda s: s.state == 'draft').write({'state': 'sent'})
+        # return self.env.ref('sale.action_report_saleorder').report_action(self)
 
     _sql_constraints = [('ma_duy_nhat', 'UNIQUE(code)', u'Mã trùng rồi điền mã cái khác đi')]
 
@@ -56,14 +61,23 @@ class Order(models.Model):
 #     _description = u"Danh sách chi tiết các hóa đơn"
 #     _auto = True
 #     _table = "fashion_details_bills"
+#     _inherit = "items_commodity"
 #
 #     bill_loan = fields.Many2one(comodel_name="bills", string="Mã phiếu", required=False, )
 #     items_loan = fields.Many2one(comodel_name="items_commodity", string="Tên mặt hàng", required=False,)
 #     mount = fields.Integer(string="Số lượng mua", default=1)
+#     # unit = fields.Char(string="Đơn vị tính", readonly=True, store=True)
+#     # unit_price = fields.Integer("Đơn giá" , readonly=True, store=True)
 #
 #     @api.constrains("mount")
 #     def _check_mount(self):
 #         for rec in self:
 #             if rec.mount < 1:
 #                 raise exceptions.ValidationError("Vui lòng xem lại số lượng hàng mua")
-
+    #
+    # @api.onchange("items_loan")
+    # def _set_data(self):
+    #     for rec in self:
+    #         rec.unit_price = rec.items_loan.unit_price
+    #         rec.unit = rec.items_loan.unit
+    #

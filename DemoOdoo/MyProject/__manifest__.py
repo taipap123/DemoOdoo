@@ -15,10 +15,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'website'],
+    'depends': ['base', 'website', "crm", "sale"],
 
     # always loaded
     "css": ["static/src/css/customtreeview.css"],
+    'qweb': [
+        'report/templates.xml',
+    ],
     'data': [
         'views/customer.xml',
         'views/employee.xml',
@@ -26,6 +29,8 @@
         'views/supplier.xml',
         'views/bill.xml',
         'views/orders.xml',
+        'report/templates.xml',
+        'report/report.xml',
         # 'security/ir.model.access.csv',
 
         'views/base.xml',

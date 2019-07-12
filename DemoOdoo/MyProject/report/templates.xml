@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_todo_task_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">        <!-- Report header content -->
+                        <t t-foreach="docs" t-as="doc">
+                            <h2><center> HÓA ĐƠN MUA HÀNG </center></h2>
+                            <h4>
+                               <strong> Mã hóa đơn:
+                                <span t-field="doc.code"/></strong>
+                            </h4>
+                            <div class="row mt32 mb32" id="informations">
+                                <div>
+                                    <div t-if="doc.name_employees" class="col-xs-3">
+                                        <strong>Nhân viên bán hàng</strong>
+                                        <p t-field="doc.name_employees"/>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <strong>Ngày lập hóa đơn:</strong>
+                                        <p t-field="doc.datecurrent"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt32 mb32" id="informations">
+
+                                <div t-if="doc.name_customer"
+                                     class="col-xs-3">
+                                    <strong>Tên khách hàng</strong>
+                                    <p t-field="doc.name_customer"/>
+                                </div>
+
+                                <div class="col-xs-3">
+                                    <strong>Địa chỉ khách hàng</strong>
+                                    <p t-field="doc.name_employees.address"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Số điện thoại khách hàng:</strong>
+                                    <p t-field="doc.name_employees.phone"/>
+                                </div>
+                            </div>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left col-xs-1">Mã</th>
+                                        <th class="text-left col-xs-3">Tên mặt hàng</th>
+                                        <th class="text-left col-xs-2">Đơn giá</th>
+                                        <th class="text-left col-xs-2">Số lượng</th>
+                                        <th class="text-left col-xs-2">Đơn vị tính</th>
+                                        <th class="text-right col-xs-3">Thông tin chi tiết sản phẩm</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody class="sale_tbody">
+                                    <tr>
+                                        <td>
+                                            <span t-field="doc.goods.code">
+
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p t-field="doc.goods.name"/>
+                                        </td>
+                                        <td>
+                                            <p t-field="doc.goods.unit_price"/>
+                                        </td>
+                                        <td>
+                                            <p t-field="doc.mount"/>
+                                        </td>
+                                        <td>
+                                            <p t-field="doc.goods.unit"/>
+                                        </td>
+                                        <td>
+                                            <p t-field="doc.goods.description"/>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="text-right">
+                                        <td colspan="6" class="">
+                                            <h4 class="">
+                                                <strong > Tổng số tiền thanh toán:
+                                                    <span t-esc="subtotal" t-field="doc.total_price"/> VNĐ
+                                                </strong>
+                                                <hr/>
+
+                                            </h4>
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

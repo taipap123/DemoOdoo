@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- QWeb Reports -->
+        <!-- NAME & FILE_NAME should be the same -->
+        <report
+                id="report_custom"
+                model="bills"
+                report_type="qweb-pdf"
+                string="Report Sales"
+                name="MyProject.report_todo_task_template"
+                file="MyProject.report_todo_task_template"/>
+
+    </data>
+</odoo>

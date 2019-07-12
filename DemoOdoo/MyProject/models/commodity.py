@@ -11,10 +11,9 @@ class CategoryCommodity(models.Model):
     _table = "fashion_categorys_commodity"
     code = fields.Integer("Mã", required=True, readonly='True')
     name = fields.Char("Tên")
-
     @api.model
     def create(self,vals):
-        vals['code'] = int(self.search_count([])) + 1
+        vals['code'] = int(self.search_count([])) + 10
         return super(CategoryCommodity, self).create(vals)
 
 
@@ -32,4 +31,4 @@ class Items(models.Model):
     category_commodity = fields.Many2many(comodel_name="category_commodity", string="Thuộc loại hàng", required=False, )
     unit = fields.Char(string="Đơn vị tính")
     img_link = fields.Char(size = 2000)
-    description = fields.Text(size = 2000)
+    description = fields.Text(size = 2000 ,string="Thông tin sản phẩm")
