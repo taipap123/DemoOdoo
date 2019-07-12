@@ -22,7 +22,7 @@
             <field name="arch" type="xml">
                 <form create='true' edit='true' string="Danh sách hóa đơn bán hàng">
                     <header>
-                         <button name="print" string="Print"/>
+<!--                         <button name="print" string="Print"/>-->
                     </header>
                     <sheet>
                         <group>
