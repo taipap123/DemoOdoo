@@ -21,6 +21,9 @@
             <field name="model">bills</field>
             <field name="arch" type="xml">
                 <form create='true' edit='true' string="Danh sách hóa đơn bán hàng">
+                    <header>
+                         <button name="print" string="Print"/>
+                    </header>
                     <sheet>
                         <group>
                             <field name="name_employees"/>
@@ -30,10 +33,10 @@
 <!--                                <tree editable="bottom">-->
 <!--                                    <field name="items_loan"/>-->
 <!--                                    <field name="mount"/>-->
-<!--                                    <field name="bill_loan"/>-->
+<!--                                    <field name="unit"/>-->
+<!--                                    <field name="unit_price"/>-->
 <!--                                </tree>-->
                             </field>
-                              <field name="mount"/>
                             <field name="total_price"/>
                         </group>
                     </sheet>
