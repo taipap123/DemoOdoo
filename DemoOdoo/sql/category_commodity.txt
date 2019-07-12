@@ -1,6 +1,6 @@
-INSERT INTO public.category_commodity(
+INSERT INTO public.fashion_category_commodity(
 	id, code, name)
 	VALUES (3, 1, N'Thời trang nữ');
-INSERT INTO public.category_commodity(
+INSERT INTO public.fashion_category_commodity(
 	id, code, name)
 	VALUES (4, 2, N'Thời trang nam');
